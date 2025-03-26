@@ -79,7 +79,7 @@ while True:
     user_input = input("Введите команду: ")
 
     if user_input.startswith("get_balance_batch"):
-        # Пример: get_several_balances 0x51f1774249Fc2B0C2603542Ac6184Ae1d048351d 0x1234567890abcdef1234567890abcdef12345678
+        # Пример: get_balance_batch ["0x51f1774249Fc2B0C23sa542Ac6184Ae1d048351d", "0x1234567890abcdef12345124890abcdef12345678"]
         _, addresses_str = user_input.split(' ', 1)
         addresses = ast.literal_eval(addresses_str)  # Преобразуем строку в список
         get_balance_batch(TOKEN_ADDRESS, *addresses)
